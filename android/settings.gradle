@@ -1,0 +1,11 @@
+rootProject.name = 'FirstProject'
+
+include ':app'
+
+include ':react-native-maps'
+project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
+
+
+include ':WebRTCModule', ':app'
+project(':WebRTCModule').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webrtc/android')
+
